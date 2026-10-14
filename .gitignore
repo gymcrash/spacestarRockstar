@@ -6,6 +6,7 @@ jspm_packages/
 dist/
 build/
 .output/
+db.json
 
 # --- Environment & Secret Variables ---
 .env
