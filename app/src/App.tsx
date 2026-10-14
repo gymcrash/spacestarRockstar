@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import './App.scss';
+import CalculatorPage from './pages/CalculatorPage';
 
 function App() {
   const [message, setMessage] = useState('');
@@ -11,10 +13,7 @@ function App() {
   }, []);
 
   return (
-    <div style={{ fontFamily: 'sans-serif', textAlign: 'center', marginTop: '50px' }}>
-      <h1>Vite + React + Express</h1>
-      <p>Backend response: <strong>{message || 'Loading...'}</strong></p>
-    </div>
+   <CalculatorPage />
   );
 }
 

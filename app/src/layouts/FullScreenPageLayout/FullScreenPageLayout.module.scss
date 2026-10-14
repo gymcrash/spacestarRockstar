@@ -1,0 +1,11 @@
+@use "../../index.scss" as *;
+
+.fullScreenPage {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; // Prevents accidental page-level scrollbars
+  display: flex;
+  flex-direction: column;
+  background-color: $bg-primary;
+  color: $text-primary;
+}
