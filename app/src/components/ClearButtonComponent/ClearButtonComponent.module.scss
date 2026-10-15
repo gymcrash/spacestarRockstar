@@ -1,0 +1,11 @@
+.clearButton {
+  background: #c0392b;
+
+  &:hover:not(:disabled) {
+    background: #e74c3c;
+  }
+
+  &:active:not(:disabled) {
+    background: #962d22;
+  }
+}

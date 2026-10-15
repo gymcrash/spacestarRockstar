@@ -1,0 +1,35 @@
+.calculatorContainer {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: #1a1a2e;
+  border: 4px solid #4e4e8a;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  user-select: none;
+
+  .calculatorKeypad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .numberGrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .actionRow {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .okRow {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+  }
+}

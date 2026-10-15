@@ -1,3 +1,4 @@
+import { CalculatorComponent } from "../components/CalculatorComponent/CalculatorComponent";
 import { FocusLayout } from "../layouts/FocusLayout/FocusLayout";
 import { FullScreenPage } from "../layouts/FullScreenPageLayout/FullScreenPageLayout";
 
@@ -6,7 +7,7 @@ function CalculatorPage() {
     <FullScreenPage>
         <FocusLayout>
             <h1>Calculator Page</h1>
-            {/* Add your calculator UI here */}
+            <CalculatorComponent />
         </FocusLayout>
     </FullScreenPage>
   );

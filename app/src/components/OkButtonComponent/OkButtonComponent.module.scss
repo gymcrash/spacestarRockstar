@@ -1,0 +1,11 @@
+.okButton {
+  background: #27ae60;
+
+  &:hover:not(:disabled) {
+    background: #2ecc71;
+  }
+
+  &:active:not(:disabled) {
+    background: #1e8449;
+  }
+}
