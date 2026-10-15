@@ -1,0 +1,29 @@
+.popoutNode {
+  position: absolute;
+  pointer-events: none;
+  animation: popEffect 500ms ease-out forwards;
+  white-space: nowrap;
+}
+
+.defaultVariant {
+  color: #ffffff;
+}
+
+.addition {
+  color: darkgreen; // Green
+}
+
+.deletion {
+  color: darkred; // Red
+}
+
+@keyframes popEffect {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}

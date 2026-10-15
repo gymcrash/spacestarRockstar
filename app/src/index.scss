@@ -2,6 +2,7 @@
 // BRAND DESIGN SYSTEM & GLOBAL TOKENS
 // ==========================================
 @use "sass:color"; // <-- Required for modern Sass color modules
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 // 1. Color Palette (Soft contrasts to prevent eye strain)
 $bg-primary: #121214;       // Rich, deep charcoal/off-black
@@ -10,8 +11,10 @@ $header-color: #a1a1aa;     // Complementary neutral grey for headers/subtitles
 
 // 2. Accent Color Variable (Change this to experiment!)
 $accent-color: #6366f1;     // Modern indigo accent for borders and focus states
+$accent-color-hover: gold; // Darker shade for hover states
 
 // 3. Typography
+$display-font: 'Victor Mono', monospace; // Monospaced font for calculator display
 $font-stack: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 
 // ==========================================
@@ -22,6 +25,11 @@ $font-stack: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border-color:rgba($accent-color, 0.3);
+
+  &:hover {
+    border-color:rgba($accent-color-hover, 0.3);
+}
 }
 
 body {
@@ -62,5 +70,9 @@ input, button, select, textarea {
     outline: none;
     border-color: $accent-color;
     box-shadow: 0 0 0 3px rgba($accent-color, 0.2);
+  }
+
+  &:hover {
+    border-color: $accent-color-hover;
   }
 }
