@@ -1,0 +1,109 @@
+$spaceTime: 120s;
+
+@mixin halftoneLayer {
+  width: 300%;
+  height: 300%;
+  top: -100%;
+  left: -100%;
+  transform-origin: center;
+  position: absolute;
+}
+
+@mixin spaceShiftAnimation($time) {
+  animation: spaceShift $time linear 0s infinite alternate-reverse;
+}
+
+.halftone {
+  @include halftoneLayer();
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.25) 0.15rem,
+    transparent 0
+  );
+  background-size: 11rem 11rem;
+  @include spaceShiftAnimation($spaceTime);
+}
+
+.hyperspace1 {
+  @include halftoneLayer();
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.25) 0.15rem,
+    transparent 0
+  );
+  background-position: 7rem 7rem;
+  background-size: 11rem 11rem;
+  animation: hyperSpace 15s linear 0s infinite forwards;
+}
+.hyperspace2 {
+  @include halftoneLayer();
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.25) 0.15rem,
+    transparent 0
+  );
+  background-position: 7rem 7rem;
+  background-size: 11rem 11rem;
+  animation: hyperSpace 15s linear 7s infinite forwards;
+}
+
+.halftone2 {
+  @include halftoneLayer();
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.175) 0.15rem,
+    transparent 0
+  );
+  background-size: 6rem 6rem;
+  @include spaceShiftAnimation($spaceTime - 10s);
+}
+
+.halftone3 {
+  @include halftoneLayer();
+  background-image: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.165) 0.125rem,
+    transparent 0
+  );
+  background-size: 3rem 3rem;
+  @include spaceShiftAnimation($spaceTime - 15s);
+}
+
+@keyframes spaceShift {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(120deg);
+  }
+  50% {
+    transform: rotateZ(240deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes hyperSpace {
+  0% {
+    transform: scale(60%, 50%);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(110%, 100%);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(200%, 150%);
+    opacity: 0;
+  }
+}
+
+.container {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+}
